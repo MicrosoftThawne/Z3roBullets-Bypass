@@ -13,6 +13,11 @@ end
 
 -->> How to bypass? <<--
 
+-->> This one is for Axon exploits using their own LUA_GLOBALSINDEX and not doing it by calling the roblox offset.
 local byp = require(game:GetService("ReplicatedStorage").Weapons.Z3roBullets)
 local _ = { math.huge, math.huge, math.huge }
 byp.ModifyBulletValue(_)
+
+-->> This one is for exploits using Roblox's getfenv function by calling it's offset.
+-->> Not sure it may work for some Axon exploits too :shrug:
+getfenv().Bullets = math.huge
