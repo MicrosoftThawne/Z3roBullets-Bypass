@@ -14,4 +14,5 @@ end
 -->> How to bypass? <<--
 
 local byp = require(game:GetService("ReplicatedStorage").Weapons.Z3roBullets)
-byp.ModifyBulletValue(math.huge, math.huge)
+local _ = { math.huge, math.huge, math.huge }
+byp.ModifyBulletValue(_)
